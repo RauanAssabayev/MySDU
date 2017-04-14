@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import com.ce.sdu.mysdu.R;
 
+
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
     private static String TAG = MainActivity.class.getSimpleName();
     private Toolbar mToolbar;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         drawerFragment = (FragmentDrawer)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
-        displayView(0);
+        displayView(15);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,21 +46,30 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public void onDrawerItemSelected(View view, int position) {
         displayView(position);
     }
-    private void displayView(int position) {
+    public void displayView(int position) {
         Fragment fragment = null;
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
                 fragment = new TimeTableFragment();
-                title = getString(R.string.title_home);
+                title = getString(R.string.title_timetable);
                 break;
             case 1:
                 fragment = new FriendsFragment();
                 title = getString(R.string.title_friends);
                 break;
             case 2:
+                fragment = new GradesFragment();
+                title = getString(R.string.title_grades);
+                break;
+            case 3:
                 fragment = new MessagesFragment();
                 title = getString(R.string.title_messages);
+                break;
+
+            case 15:
+                fragment = new FragmentLogin();
+                title = getString(R.string.title_login);
                 break;
             default:
                 break;

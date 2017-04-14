@@ -11,33 +11,38 @@
         android:layout_height="180dp"
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary">
-
+        <ImageButton
+            android:id="@+id/prof"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/login_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/profile_background"
+            android:elevation="4dp"
+            android:src="@drawable/acc" />
         <TextView
-            android:text="Асет Нұрғазы 8(a)"
+            android:text="Assabayev Rauan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_below="@+id/prof"
+            android:layout_marginTop="10dp"
             android:textColor="#FFF"
+            android:textSize="18sp"
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:text="Гимназия №36"
+            android:text="Group: EN4B04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:layout_below="@+id/textView2"
             android:textColor="#FFF"
+            android:textSize="15sp"
             android:layout_centerHorizontal="true" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
 
-            android:id="@+id/prof"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
@@ -47,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nav_header_container"
-        android:layout_marginTop="15dp" />
+         />
 
 
 </RelativeLayout>
