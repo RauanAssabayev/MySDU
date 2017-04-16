@@ -11,14 +11,12 @@
     <string name="nav_item_messages">Сообщения</string>
     <string name="nav_item_grades">Оценки</string>
 
-
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>@string/nav_item_home</item>
         <item>@string/nav_item_hw</item>
         <item>@string/nav_item_grades</item>
         <item>@string/nav_item_messages</item>
-
     </string-array>
 
     <string name="title_messages">Messages</string>
@@ -27,4 +25,5 @@
     <string name="title_timetable">TimeTable</string>
     <string name="title_login">Login</string>
     <string name="title_grades">Login</string>
+
 </resources>
