@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 fragment = new MessagesFragment();
                 title = getString(R.string.title_messages);
                 break;
-
             case 15:
                 fragment = new FragmentLogin();
                 title = getString(R.string.title_login);

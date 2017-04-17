@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary">
+        android:background="#2C3E50">
         <ImageButton
             android:id="@+id/prof"
             android:layout_width="100dp"
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nav_header_container"
-         />
+        android:background="#DBDBDB"/>
 
 
 </RelativeLayout>
