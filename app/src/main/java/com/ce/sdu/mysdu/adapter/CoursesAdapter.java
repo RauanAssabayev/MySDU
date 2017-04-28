@@ -21,11 +21,13 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.MyViewHo
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView textViewName;
         TextView textViewVersion;
+        TextView textViewTime;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = (TextView) itemView.findViewById(R.id.course_grade);
+            this.textViewName = (TextView) itemView.findViewById(R.id.course_title);
             this.textViewVersion = (TextView) itemView.findViewById(R.id.course_grade);
+            this.textViewTime = (TextView) itemView.findViewById(R.id.time);
         }
     }
     public CoursesAdapter(ArrayList<DataModel> dataModels) {
@@ -43,8 +45,10 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.MyViewHo
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
         TextView textViewName = holder.textViewName;
         TextView textViewVersion = holder.textViewVersion;
+        TextView textViewTime =  holder.textViewTime;
         textViewName.setText(dataSet.get(listPosition).getName());
         textViewVersion.setText(dataSet.get(listPosition).getVersion());
+        textViewTime.setText(dataSet.get(listPosition).getId());
     }
     @Override
     public int getItemCount() {

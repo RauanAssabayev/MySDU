@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.ce.sdu.mysdu.R;
 import com.ce.sdu.mysdu.model.DataModel;
+import com.ce.sdu.mysdu.model.GradesModel;
 
 import java.util.ArrayList;
 
@@ -16,23 +17,21 @@ import java.util.ArrayList;
  */
 
 public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.MyViewHolder>{
-    private ArrayList<DataModel> dataSet;
+    private ArrayList<GradesModel> dataSet;
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView textViewName;
         TextView textViewVersion;
-
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = (TextView) itemView.findViewById(R.id.course_title);
-            this.textViewVersion = (TextView) itemView.findViewById(R.id.course_grade);
+            this.textViewName = (TextView) itemView.findViewById(R.id.textViewName);
+            this.textViewVersion = (TextView) itemView.findViewById(R.id.textViewVersion);
         }
     }
-    public GradesAdapter(ArrayList<DataModel> dataModels) {
+    public GradesAdapter(ArrayList<GradesModel> dataModels) {
         this.dataSet = dataModels;
     }
     @Override
-    public GradesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                          int viewType) {
+    public GradesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.courses_layout, parent, false);
         GradesAdapter.MyViewHolder myViewHolder = new GradesAdapter.MyViewHolder(view);
@@ -51,4 +50,5 @@ public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.MyViewHold
     public int getItemCount() {
         return dataSet.size();
     }
+
 }

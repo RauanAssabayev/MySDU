@@ -1,15 +1,15 @@
 package com.ce.sdu.mysdu.model;
 
 /**
- * Created by rauan on 07.04.2017.
+ * Created by rauan on 28.04.2017.
  */
 
-public class DataModel {
+public class GradesModel {
     String name;
     String version;
     String id_;
     int image;
-    public DataModel(String name, String version, String id_) {
+    public GradesModel(String name, String version, String id_) {
         this.name = name;
         this.version = version;
         this.id_ = id_;
@@ -25,4 +25,5 @@ public class DataModel {
     public String getId() {
         return id_;
     }
+
 }

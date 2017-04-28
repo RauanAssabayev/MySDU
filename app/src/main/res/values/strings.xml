@@ -4,7 +4,13 @@
     <string name="action_search">Search</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="monday">MONDAY</string>
+    <string name="monday">Mo</string>
+    <string name="tuesday">Tu</string>
+    <string name="wednesday">We</string>
+    <string name="thursday">Th</string>
+    <string name="friday">Fr</string>
+    <string name="saturday">Sa</string>
+    <string name="sunday">Su</string>
 
     <string name="nav_item_home">Расписание</string>
     <string name="nav_item_hw">Домашнее задание</string>
@@ -21,9 +27,9 @@
 
     <string name="title_messages">Messages</string>
     <string name="title_friends">Friends</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Home Work</string>
     <string name="title_timetable">TimeTable</string>
     <string name="title_login">Login</string>
-    <string name="title_grades">Login</string>
+    <string name="title_grades">Grades</string>
 
 </resources>

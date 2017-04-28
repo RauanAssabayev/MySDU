@@ -8,23 +8,26 @@
 
     <TextView
         android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="MESSAGES"
-        android:textStyle="bold"/>
+        android:text="** Dear students!!! **"
+        android:textColor="@color/colorRed"
+        android:textSize="35dp"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="12dp"
+        android:layout_below="@id/label"
+        android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Edit fragment_messages.xml to change the appearance" />
+        android:textColor="@color/colorPortalGreen"
+        android:text=" We are glad to inform you that the registration to the dormitory for 2 semester of 2016-2017 year has begun! To get additional information please proceed to accounting office or contact us by telephone:  Dormitory for Boys: 8 702 586 22 63  Dormitory for Girls: 8 775 529 27 26"
+        android:textSize="12dp" />
 
 </RelativeLayout>

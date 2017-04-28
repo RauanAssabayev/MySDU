@@ -10,9 +10,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:height="50dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center_vertical|center_horizontal"
-        android:text="@string/monday"
+        android:text="@string/title_grades"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -20,7 +20,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
 
         android:scrollbars="vertical"
         />

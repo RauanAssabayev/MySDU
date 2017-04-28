@@ -15,8 +15,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.ce.sdu.mysdu.R;
 import com.ce.sdu.mysdu.adapter.CoursesAdapter;
+import com.ce.sdu.mysdu.adapter.GradesAdapter;
 import com.ce.sdu.mysdu.data.Courses;
+import com.ce.sdu.mysdu.data.Grades;
 import com.ce.sdu.mysdu.model.DataModel;
+import com.ce.sdu.mysdu.model.GradesModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +37,7 @@ public class GradesFragment extends Fragment {
     private static RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private static RecyclerView recyclerView;
-    private static ArrayList<DataModel> data;
+    private static ArrayList<GradesModel> data;
 
 
     public GradesFragment() {
@@ -64,15 +67,15 @@ public class GradesFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        data = new ArrayList<DataModel>();
-        for (int i = 0; i < Courses.nameArray.length; i++) {
-            data.add(new DataModel(
-                    Courses.nameArray[i],
-                    Courses.versionArray[i],
-                    Courses.id_[i]
+        data = new ArrayList<GradesModel>();
+        for (int i = 0; i < Grades.nameArray.length; i++) {
+            data.add(new GradesModel(
+                    Grades.nameArray[i],
+                    Grades.versionArray[i],
+                    Grades.id_[i]
             ));
         }
-        adapter = new CoursesAdapter(data);
+        adapter = new GradesAdapter(data);
         recyclerView.setAdapter(adapter);
     }
 

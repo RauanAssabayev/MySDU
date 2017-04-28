@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_alignParentTop="true"
-        android:background="#2C3E50">
+        android:background="@drawable/mainback"
+        >
         <ImageButton
             android:id="@+id/prof"
             android:layout_width="100dp"

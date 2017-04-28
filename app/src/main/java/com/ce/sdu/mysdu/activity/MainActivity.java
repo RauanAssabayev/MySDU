@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import com.ce.sdu.mysdu.R;
 
-
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
     private static String TAG = MainActivity.class.getSimpleName();
     private Toolbar mToolbar;
@@ -55,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_timetable);
                 break;
             case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                fragment = new HomeFragment();
+                title = getString(R.string.title_home);
                 break;
             case 2:
                 fragment = new GradesFragment();
