@@ -17,7 +17,7 @@
         android:text="** Dear students!!! **"
         android:textColor="@color/colorRed"
         android:textSize="35dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="fill_parent"
