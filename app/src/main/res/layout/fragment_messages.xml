@@ -5,7 +5,6 @@
     android:orientation="vertical"
     tools:context="com.ce.sdu.mysdu.activity.MessagesFragment">
 
-
     <TextView
         android:id="@+id/label"
         android:layout_width="fill_parent"
@@ -28,6 +27,7 @@
         android:gravity="center_horizontal"
         android:textColor="@color/colorPortalGreen"
         android:text=" We are glad to inform you that the registration to the dormitory for 2 semester of 2016-2017 year has begun! To get additional information please proceed to accounting office or contact us by telephone:  Dormitory for Boys: 8 702 586 22 63  Dormitory for Girls: 8 775 529 27 26"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        />
 
 </RelativeLayout>

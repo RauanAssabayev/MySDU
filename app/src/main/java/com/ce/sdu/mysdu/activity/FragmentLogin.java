@@ -28,8 +28,6 @@ import retrofit2.Response;
  */
 
 public class FragmentLogin extends Fragment {
-    String login = "130107035";
-    String password = "asabaev123";
     EditText loginForm, passwordForm;
     Button signInButton;
 
@@ -44,23 +42,22 @@ public class FragmentLogin extends Fragment {
                 public void onResponse(Call call, Response response) {
                     Student student = (Student) response.body();
                     Toast.makeText(getActivity().getApplicationContext(), student.getmName() + "-" + student.getmSurname(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getApplicationContext(), student.getmDEP_ID_QEYD() + "-" + student.getmSurname(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getApplicationContext(), student.getmNameNative() + "-" + student.getmPatronymic(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), "second", Toast.LENGTH_SHORT).show();
+                    Fragment fragment = new TimeTableFragment();
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.container_body, fragment);
+                    fragmentTransaction.commit();
                 }
 
                 @Override
                 public void onFailure(Call call, Throwable t) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Login or password incorrect ", Toast.LENGTH_LONG).show();
                     call.cancel();
                 }
             });
-
-            Toast.makeText(getContext(), loginForm.getText().toString() + "-" + passwordForm.getText().toString(), Toast.LENGTH_SHORT).show();
-            if ((loginForm.getText().toString().equals(login)) && (passwordForm.getText().toString().equals(password))) {
-                Toast.makeText(getContext(), "second", Toast.LENGTH_SHORT).show();
-                Fragment fragment = new TimeTableFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container_body, fragment);
-                fragmentTransaction.commit();
-            }
         }
     };
 
@@ -95,5 +92,4 @@ public class FragmentLogin extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
-
 }
