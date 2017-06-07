@@ -16,6 +16,8 @@ import java.util.Collections;
 import java.util.List;
 import com.ce.sdu.mysdu.R;
 
+import org.w3c.dom.Text;
+
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();
@@ -27,7 +29,6 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
             R.drawable.ic_grade,
             R.drawable.ic_mail_outline
     };
-
     public NavigationDrawerAdapter(Context context, List<NavDrawerItem> data) {
         this.context = context;
         inflater = LayoutInflater.from(context);

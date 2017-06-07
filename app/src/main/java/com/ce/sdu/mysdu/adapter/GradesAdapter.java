@@ -1,5 +1,4 @@
 package com.ce.sdu.mysdu.adapter;
-
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +10,6 @@ import com.ce.sdu.mysdu.model.DataModel;
 import com.ce.sdu.mysdu.model.GradesModel;
 
 import java.util.ArrayList;
-
-/**
- * Created by rauan on 14.04.2017.
- */
-
 public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.MyViewHolder>{
     private ArrayList<GradesModel> dataSet;
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -37,7 +31,6 @@ public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.MyViewHold
         GradesAdapter.MyViewHolder myViewHolder = new GradesAdapter.MyViewHolder(view);
         return myViewHolder;
     }
-
     @Override
     public void onBindViewHolder(final GradesAdapter.MyViewHolder holder, final int listPosition) {
         TextView textViewName = holder.textViewName;
@@ -45,10 +38,8 @@ public class GradesAdapter extends RecyclerView.Adapter<GradesAdapter.MyViewHold
         textViewName.setText(dataSet.get(listPosition).getName());
         textViewVersion.setText(dataSet.get(listPosition).getVersion());
     }
-
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
-
 }

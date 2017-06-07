@@ -20,21 +20,21 @@
             android:elevation="4dp"
             android:src="@drawable/acc" />
         <TextView
-            android:text="Assabayev Rauan"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/fio"
             android:layout_below="@+id/prof"
             android:layout_marginTop="10dp"
             android:textColor="#FFF"
             android:textSize="18sp"
             android:layout_centerHorizontal="true" />
         <TextView
-            android:text="Group: EN4B04"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:layout_below="@+id/textView2"
+            android:id="@+id/group"
+            android:layout_below="@+id/fio"
             android:textColor="#FFF"
             android:textSize="15sp"
             android:layout_centerHorizontal="true" />
