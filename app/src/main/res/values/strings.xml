@@ -12,10 +12,11 @@
     <string name="saturday">Sa</string>
     <string name="sunday">Su</string>
 
-    <string name="nav_item_home">Расписание</string>
-    <string name="nav_item_hw">Домашнее задание</string>
-    <string name="nav_item_messages">Сообщения</string>
-    <string name="nav_item_grades">Оценки</string>
+    <string name="nav_item_home">Time Table</string>
+    <string name="nav_item_hw">Home work</string>
+    <string name="nav_item_messages">Message</string>
+    <string name="nav_item_grades">Grades</string>
+    <string name="nav_item_logout">Logout</string>
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
@@ -23,6 +24,7 @@
         <item>@string/nav_item_hw</item>
         <item>@string/nav_item_grades</item>
         <item>@string/nav_item_messages</item>
+        <item>@string/nav_item_logout</item>
     </string-array>
 
     <string name="title_messages">Messages</string>

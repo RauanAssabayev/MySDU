@@ -9,38 +9,50 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.ce.sdu.mysdu.R;
 import java.util.ArrayList;
+
+import com.ce.sdu.mysdu.model.Courses;
 import com.ce.sdu.mysdu.model.DataModel;
 
 public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.MyViewHolder> {
-    private ArrayList<DataModel> dataSet;
+    private ArrayList<Courses> dataSet;
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewName;
-        TextView textViewVersion;
-        TextView textViewTime;
+
+        TextView tvsubject;
+        TextView tvmd1;
+        TextView tvmd2;
+        TextView tvfin;
+        TextView tvavg;
+
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = (TextView) itemView.findViewById(R.id.course_title);
-            this.textViewVersion = (TextView) itemView.findViewById(R.id.course_grade);
-            this.textViewTime = (TextView) itemView.findViewById(R.id.time);
+            this.tvsubject = (TextView) itemView.findViewById(R.id.tvsubject);
+            this.tvmd1 = (TextView) itemView.findViewById(R.id.tvmd1);
+            this.tvmd2 = (TextView) itemView.findViewById(R.id.tvmd2);
+            this.tvfin = (TextView) itemView.findViewById(R.id.tvfin);
+            this.tvavg = (TextView) itemView.findViewById(R.id.tvavg);
         }
     }
-    public CoursesAdapter(ArrayList<DataModel> dataModels) {
+    public CoursesAdapter(ArrayList<Courses> dataModels) {
         this.dataSet = dataModels;
     }
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.course_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grade_item, parent, false);
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
-        TextView textViewName = holder.textViewName;
-        TextView textViewVersion = holder.textViewVersion;
-        TextView textViewTime =  holder.textViewTime;
-        textViewName.setText(dataSet.get(listPosition).getName());
-        textViewVersion.setText(dataSet.get(listPosition).getVersion());
-        textViewTime.setText(dataSet.get(listPosition).getId());
+        TextView tvsubject = holder.tvsubject;
+        TextView tvmd1 = holder.tvmd1;
+        TextView tvmd2 = holder.tvmd2;
+        TextView tvfin = holder.tvfin;
+        TextView tvavg = holder.tvavg;
+        tvsubject.setText(dataSet.get(listPosition).getTitle()+"");
+        tvmd1.setText(dataSet.get(listPosition).getMt1()+"");
+        tvmd2.setText(dataSet.get(listPosition).getMt1()+"");
+        tvfin.setText(dataSet.get(listPosition).getFin()+"");
+        tvavg.setText(dataSet.get(listPosition).getOrt()+"");
     }
     @Override
     public int getItemCount() {

@@ -52,22 +52,24 @@ public class TimeTableFragment extends Fragment {
         String stud_pass = prefs.getString("password","empty");
         String basicAuth = "Basic " + Base64.encodeToString(String.format("%s:%s", stud_id, stud_pass).getBytes(), Base64.NO_WRAP);
         API api = APIClient.getClient().create(API.class);
-        Call<Timetable> call = api.getTimeTableData(basicAuth);
-        if (isNetworkConnected()) {
-            call.enqueue(new Callback() {
-                @Override
-                public void onResponse(Call call, Response response) {
-                    Timetable TimeTable = (Timetable) response.body();
-                }
-                @Override
-                public void onFailure(Call call, Throwable t) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Failed to load data!!!", Toast.LENGTH_LONG).show();
-                    call.cancel();
-                }
-            });
-        }else{
-            Toast.makeText(getContext(), "You need internet conncetion",Toast.LENGTH_LONG).show();
-        }
+
+        //Call<Timetable> call = api.getTimeTableData(basicAuth);
+
+//        if (isNetworkConnected()) {
+//            call.enqueue(new Callback() {
+//                @Override
+//                public void onResponse(Call call, Response response) {
+//                    Timetable TimeTable = (Timetable) response.body();
+//                }
+//                @Override
+//                public void onFailure(Call call, Throwable t) {
+//                    Toast.makeText(getActivity().getApplicationContext(), "Failed to load data!!!", Toast.LENGTH_LONG).show();
+//                    call.cancel();
+//                }
+//            });
+//        }else{
+//            Toast.makeText(getContext(), "You need internet conncetion",Toast.LENGTH_LONG).show();
+//        }
         super.onActivityCreated(savedInstanceState);
         recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -83,7 +85,7 @@ public class TimeTableFragment extends Fragment {
             ));
         }
         removedItems = new ArrayList<Integer>();
-        adapter = new CoursesAdapter(data);
+        //adapter = new CoursesAdapter(data);
         recyclerView.setAdapter(adapter);
     }
     @Override

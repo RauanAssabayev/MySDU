@@ -47,7 +47,7 @@
                     android:drawableLeft="@drawable/user2"
                     android:drawableTint="#000"
                     android:hint=" SDU ID"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textNoSuggestions|numberDecimal"
                     android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 

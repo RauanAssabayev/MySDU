@@ -27,7 +27,8 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
     private int icons [] = {R.drawable.ic_assignment,
             R.drawable.ic_home,
             R.drawable.ic_grade,
-            R.drawable.ic_mail_outline
+            R.drawable.ic_mail_outline,
+            R.drawable.ic_action_export
     };
     public NavigationDrawerAdapter(Context context, List<NavDrawerItem> data) {
         this.context = context;

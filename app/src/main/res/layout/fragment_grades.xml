@@ -4,26 +4,70 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:height="50dp"
-        android:background="@color/colorPrimaryDark"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="@string/title_grades"
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:padding="3dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/tvsubject"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:textColor="#FFF"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Subject" />
+
+        <TextView
+            android:id="@+id/tvmd1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFF"
+            android:text="MD1" />
+
+        <TextView
+            android:id="@+id/tvmd2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFF"
+            android:text="MD2" />
+
+        <TextView
+            android:id="@+id/tvfin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:text="FIN" />
+        <TextView
+            android:id="@+id/tvavg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFF"
+            android:text="AVG" />
+    </LinearLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
+        android:layout_height="502dp"
+        android:scrollbars="vertical" />
+
+    <Spinner
+        android:id="@+id/spinnerTerm"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:scrollbars="vertical"
-        />
-
-
+        android:spinnerMode="dialog" />
 </LinearLayout>

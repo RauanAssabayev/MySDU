@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="cards main container"
+    android:padding="5dp"
+    >
+    <android.support.v7.widget.CardView
+        android:id="@+id/android_card_view_example"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvsubject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textSize="14sp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvmd1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="100"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvmd2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="14sp"
+                android:text="100" />
+
+            <TextView
+                android:id="@+id/tvfin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="100" />
+            <TextView
+                android:id="@+id/tvavg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:text="100" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
