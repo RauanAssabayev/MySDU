@@ -1,24 +1,33 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.ce.sdu.mysdu.activity.HomeFragment">
 
-
-    <TextView
-        android:id="@+id/label"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="1dp"
-        android:textColor="@color/colorWhite"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_horizontal"
-        android:text="HOME WORKS"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-
-</RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:background="#fff">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/icon"
+            android:layout_toRightOf="@+id/icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="0dp"
+            android:text="Home Work"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="5dp"
+            app:srcCompat="@android:drawable/btn_star_big_on"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>

@@ -48,13 +48,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         drawerFragment = (FragmentDrawer)getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
-
-        SharedPreferences prefs = getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
-        int stud_id = prefs.getInt(login,0);
         Toast.makeText(getApplicationContext(),login+"",Toast.LENGTH_LONG).show();
         drawerFragment.setDrawerListener(this);
-        prefs = getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
-        stud_id = prefs.getInt("login",0);
+        SharedPreferences prefs = getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
+        int stud_id = prefs.getInt("login",0);
         String stud_pass = prefs.getString("password","empty");
         if(stud_id == 0){
             displayView(15);

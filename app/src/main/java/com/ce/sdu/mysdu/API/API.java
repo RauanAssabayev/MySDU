@@ -3,6 +3,7 @@ package com.ce.sdu.mysdu.API;
 import com.ce.sdu.mysdu.model.Courses;
 import com.ce.sdu.mysdu.model.Grades;
 import com.ce.sdu.mysdu.model.Message;
+import com.ce.sdu.mysdu.model.RegCourses;
 import com.ce.sdu.mysdu.model.Student;
 import com.ce.sdu.mysdu.model.Timetable;
 
@@ -31,14 +32,10 @@ public interface API {
             @Path("term") String term
     );
 
-    @GET("myapi/v1/index.php/grades/{year}/{term}")
-    Call<Timetable> getTimeTableData(
+    @GET("myapi/v1/index.php/regcourses/{year}/{term}")
+    Call<List<RegCourses>> getRegCoursesData(
             @Header("Authorization") String basicAuthorization,
             @Path("year") String year,
             @Path("term") String term
     );
-
-
-
-
 }
