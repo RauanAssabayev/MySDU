@@ -60,31 +60,20 @@ public class GradesFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-
         prefs = getActivity().getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
         Spinner spinner = (Spinner) getActivity().findViewById(R.id.spinnerTerm);
         spinner.setOnItemSelectedListener(this);
         int studClass = prefs.getInt(sclass,0);
         List<String> categories = new ArrayList<String>();
-
         int year = Calendar.getInstance().get(Calendar.YEAR);
-
         for(int i = studClass; i>0; i--){
             year = year - 1;
-            categories.add(year+"/"+2);
-            categories.add(year+"/"+1);
+            categories.add(year+"|"+2);
+            categories.add(year+"|"+1);
         }
-
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_item, categories);
-        dataAdapter.setDropDownViewResource(android.R.layout.select_dialog_item);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.spinner_row, R.id.weekofday, categories);
         spinner.setAdapter(dataAdapter);
-
-
         setGrades(year+studClass-1,2);
-
-
-
     }
     @Override
     public void onAttach(Activity activity) {
@@ -108,11 +97,8 @@ public class GradesFragment extends Fragment implements AdapterView.OnItemSelect
         }
         year = year - 1;
         position = position/2;
-        Toast.makeText(getActivity(),year-position+"/"+term ,Toast.LENGTH_LONG).show();
         setGrades(year-position,term);
-
     }
-
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 

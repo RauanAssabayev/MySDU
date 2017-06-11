@@ -11,7 +11,7 @@ public class RegCourses {
     @SerializedName("DERS_AL_ID")
     private String dersAlId;
     @SerializedName("DERS_KOD")
-    private int dersKod;
+    private String dersKod;
     @SerializedName("SECTION")
     private int section;
     @SerializedName("PRACTICE")
@@ -51,11 +51,11 @@ public class RegCourses {
         this.dersAlId = dersAlId;
     }
 
-    public int getDersKod() {
+    public String getDersKod() {
         return dersKod;
     }
 
-    public void setDersKod(int dersKod) {
+    public void setDersKod(String dersKod) {
         this.dersKod = dersKod;
     }
 

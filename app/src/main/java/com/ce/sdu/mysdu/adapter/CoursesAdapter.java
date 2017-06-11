@@ -2,6 +2,7 @@ package com.ce.sdu.mysdu.adapter;
 /**
  * Created by rauan on 07.04.2017.
  */
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,12 +51,24 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.MyViewHo
         TextView tvavg = holder.tvavg;
         tvsubject.setText(dataSet.get(listPosition).getTitle()+"");
         tvmd1.setText(dataSet.get(listPosition).getMt1()+"");
-        tvmd2.setText(dataSet.get(listPosition).getMt1()+"");
+        tvmd2.setText(dataSet.get(listPosition).getMt2()+"");
         tvfin.setText(dataSet.get(listPosition).getFin()+"");
         tvavg.setText(dataSet.get(listPosition).getOrt()+"");
+        int avg = dataSet.get(listPosition).getOrt();
+        if(avg>=75){
+            tvavg.setTextColor(Color.GREEN);
+        }
+        else if(avg >= 50 && avg < 75){
+            tvavg.setTextColor(Color.rgb(255, 153, 0));
+
+        }else {
+            tvavg.setTextColor(Color.RED);
+        }
     }
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
+
+
 }

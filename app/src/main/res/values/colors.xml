@@ -6,4 +6,7 @@
     <color name="colorWhite">#FFF</color>
     <color name="colorRed">#F00</color>
     <color name="colorPortalGreen">#006633</color>
+    <color name="colorOrange">#FF9900</color>
+    <color name="colorGrayBorder">#e6e6e6</color>
+    <color name="colorActiveItem">#262626</color>;
 </resources>
